@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        REPERTOIR ="/"
+        REPERTOIR = "/"
     }
     stages {
         stage('build') {
