@@ -15,9 +15,11 @@ pipeline {
                 echo 'test...'
             }
         }
-        stage('deploy') {
-            steps {
-                echo 'deploitement...'
+        stage('lister repertoire') {
+            steps {sh '''
+                    echo "Contenu du répertoire : $REPERTOIRE" 
+                    ls -la $REPERTOIRE
+                   '''  echo 'deploitement...'
             }
         }
     }
