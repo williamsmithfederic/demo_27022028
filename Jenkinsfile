@@ -1,6 +1,9 @@
 pipeline {
     agent any
 
+    environment {
+        REPERTOIR ="/"
+    }
     stages {
         stage('build') {
             steps {
