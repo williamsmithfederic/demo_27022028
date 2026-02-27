@@ -24,16 +24,17 @@ pipeline {
                     echo "Contenu du répertoire : $REPERTOIRE"
                     ls -la $REPERTOIRE
                 '''
-                echo 'deploiement...'
+                echo 'déploiement...'
             }
         }
-        post {
+    }
+
+    post {
         success {
             echo "Pipeline exécuté avec succès"
         }
         failure {
             echo "Le pipeline a échoué"
         }
-    }
     }
 }
