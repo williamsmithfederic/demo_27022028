@@ -27,5 +27,13 @@ pipeline {
                 echo 'deploiement...'
             }
         }
+        post {
+        success {
+            echo "Pipeline exécuté avec succès"
+        }
+        failure {
+            echo "Le pipeline a échoué"
+        }
+    }
     }
 }
